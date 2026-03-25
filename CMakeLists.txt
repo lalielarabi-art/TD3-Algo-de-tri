@@ -15,3 +15,7 @@ add_executable(exo_2 src/exo_2.cpp)
 
 # On indique que l'on veut créer un exécutable "exo_3" compilé à partir du fichier exo_1.cpp
 add_executable(exo_3 src/exo_3.cpp)
+
+
+# On indique que l'on veut créer un exécutable "exo_4" compilé à partir du fichier exo_1.cpp
+add_executable(exo_4 src/exo_4.cpp)
