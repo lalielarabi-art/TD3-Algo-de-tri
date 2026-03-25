@@ -1,6 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "ScopedTimer.hpp"
+
+std::vector<int> generate_random_vector(size_t const size, int const max = 100) {
+    std::vector<int> vec(size);
+    std::generate(vec.begin(), vec.end(), [&max]() { return std::rand() % max;} );
+    return vec;
+}
+
 bool is_sorted(std::vector<int> const& vec) { return std::is_sorted(vec.begin(), vec.end()); }
 
 
@@ -54,7 +62,8 @@ void merge_sort(std::vector<int> & vec) {
     merge_sort(vec, 0, vec.size() - 1);
 }
 int main(){
-    std::vector<int> array {1, 52, 5, 150, 60, 7, 27, 16};
+    ScopedTimer timer("temps");
+    std::vector<int> array = generate_random_vector(10000,10);
     merge_sort(array);
 
     if (is_sorted(array)) {
@@ -64,8 +73,8 @@ std::cout << "Le tableau n'est pas trié" << std::endl;
 }
 
 
-    for (std::size_t i {0}; i < array.size(); i++)
+    /*/for (std::size_t i {0}; i < array.size(); i++)
     {
         std::cout << array[i] << std::endl;
-    }
+    }/*/
 }

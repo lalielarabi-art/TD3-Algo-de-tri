@@ -10,5 +10,8 @@ project(IMAC_project)
 # On indique que l'on veut créer un exécutable "exo_1" compilé à partir du fichier exo_1.cpp
 add_executable(exo_1 src/exo_1.cpp)
 
-# On indique que l'on veut créer un exécutable "exo_1" compilé à partir du fichier exo_1.cpp
+# On indique que l'on veut créer un exécutable "exo_2" compilé à partir du fichier exo_1.cpp
 add_executable(exo_2 src/exo_2.cpp)
+
+# On indique que l'on veut créer un exécutable "exo_3" compilé à partir du fichier exo_1.cpp
+add_executable(exo_3 src/exo_3.cpp)
